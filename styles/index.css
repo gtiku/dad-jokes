@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "LB";
+  src: url(../../assets/fonts/LibreBaskerville-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LB Italic";
+  src: url(../../assets/fonts/LibreBaskerville-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LB Bold";
+  src: url(../../assets/fonts/LibreBaskerville-Bold.ttf) format("truetype");
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "LB";
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: black;
+  background-color: #eeeee4;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
+
+h1,
+h2 {
+  font-family: "LB Bold";
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 4rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-family: "LB";
+  padding: 1rem;
+  margin: 1rem;
+  width: 12rem;
+  border: none;
+}
+button:hover {
+  box-shadow: 5px 5px 12px 5px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 2rem;
+    width: 16rem;
+  }
+}
+
+.generator {
+  margin: 2rem 5%;
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 15px;
+  min-width: 25rem;
+  max-width: 50rem;
+}
+@media (min-width: 768px) {
+  .generator {
+    padding: 3rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+    max-width: 60rem;
+  }
+}
+@media (min-width: 1280px) {
+  .generator {
+    padding: 4rem;
+    margin: 0 auto;
+  }
+}
+.generator__header-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .generator__header-search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.generator__header {
+  padding: 2rem 0;
+}
+.generator__subheader, .generator__text {
+  padding: 1.5rem 0;
+}
+.generator span {
+  font-family: "LB Italic";
+  padding: 0 2rem;
+}
+.generator__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .generator__buttons {
+    padding-top: 2rem;
+  }
+}
+.generator__new-joke--search, .generator__add-to-favourites--search {
+  visibility: hidden;
+}
+.generator__search-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.generator__search-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.generator__search-result > .generator__text {
+  width: 16rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .generator__search-result > .generator__text {
+    width: 40rem;
+  }
+}
+.generator__search-result > button {
+  font-size: 1.2rem;
+  width: 8rem;
+  padding: 0.5rem;
+}
+@media (min-width: 768px) {
+  .generator__search-result > button {
+    width: 12rem;
+    padding: 1rem;
+  }
+}
+
+form {
+  font-family: "LB";
+  font-weight: 400;
+}
+
+input {
+  background-color: #eeeee4;
+  color: black;
+  font-size: 1.6rem;
+  font-family: "LB";
+  padding-left: 1rem;
+  height: 3rem;
+  border-radius: 5px;
+  width: 16rem;
+}
+input:focus {
+  outline-color: black;
+}
+
+button[type=submit] {
+  background-color: #eeeee4;
+  border: none;
+  color: black;
+  width: 2rem;
+  margin: 0;
+  text-align: center;
+}
+button[type=submit]:hover {
+  box-shadow: none;
+}
+
+.favourite {
+  margin: 2rem;
+  margin-top: 8rem;
+}
+@media (min-width: 768px) {
+  .favourite {
+    min-width: none;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1280px) {
+  .favourite {
+    margin: 0 auto;
+  }
+}
+.favourite__header {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  line-height: 4.2rem;
+}
+@media (min-width: 768px) {
+  .favourite__header {
+    padding-bottom: 4rem;
+    font-size: 5rem;
+  }
+}
+.favourite__joke-container {
+  padding-bottom: 2rem;
+}
+.favourite__joke {
+  font-weight: 600;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.favourite__joke-date {
+  font-family: "LB Italic";
+  text-align: end;
+}
+
+@media (min-width: 1280px) {
+  main {
+    margin: 0 auto;
+    max-width: 160rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 6rem;
+    margin: 4rem 2rem;
+  }
+}/*# sourceMappingURL=index.css.map */

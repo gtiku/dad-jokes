@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Jokes</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/gen-jokes.js" defer></script>
+</head>
+<body>
+    <main>
+    <section class="generator">
+        <div class="generator__header-search-container">
+            <h1 class="generator__header">dad joke</h1>
+            <div class="generator__search-bar">
+                <form class="search">            
+                    <input class="search__input" type="text" name="search-joke" id="search-joke">
+                    <!-- <input type="submit" value="Search"> -->
+                    <button type="submit" ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></button>
+                </form>
+            </div>
+        </div>
+        
+        <h2 class="generator__subheader">[dad-johk] <span class="generator__subheader--italic">noun.</span></h2>
+        <h3 class="generator__text">A dad joke is a joke so corny or lame that
+            only a tragically unhip dad would think it's funny.
+        </h3>
 
+        <div class="generator__search-results"> <!-- hidden unless search button is clicked -->
+            <div class="generator__search-result">
+                <!-- <h3 class="generator__text"></h3>
+                <button class="generator__add-to-favourites">Save Joke</button> -->
+            </div>
+
+        </div>
+        <div class="generator__buttons">
+            <button class="generator__new-joke">New Joke</button>
+            <button id="original" class="generator__add-to-favourites generator__add-to-favourites--search">Save Joke</button>
+        </div>
+    </section>
+
+    <section class="favourite">
+        <div class="favourite__joke-container">
+            <p class="favourite__joke"></p>
+            <p class="favourite__joke-date"></p>
+        </div>
+    </section>
+
+    <section class="favourite">
+        <!-- <h1 class="favourite__header">Favourite Jokes</h1> -->
+        
+        <!-- <div class="favourite__joke-container">
+            <p class="favourite__joke">"My dog used to chase people on a bike a lot. It got so bad I had to take his bike away."</p>
+            <p class="favourite__joke-date">December 12, 2022</p>
+        </div>
+
+        <div class="favourite__joke-container">
+            <p class="favourite__joke">"My dog used to chase people on a bike a lot. It got so bad I had to take his bike away."</p>
+            <p class="favourite__joke-date">December 12, 2022</p>
+        </div>
+        <div class="favourite__joke-container">
+            <p class="favourite__joke">"My dog used to chase people on a bike a lot. It got so bad I had to take his bike away."</p>
+            <p class="favourite__joke-date">December 12, 2022</p>
+        </div>
+        <div class="favourite__joke-container">
+            <p class="favourite__joke">"My dog used to chase people on a bike a lot. It got so bad I had to take his bike away."</p>
+            <p class="favourite__joke-date">December 12, 2022</p>
+        </div>
+        <div class="favourite__joke-container">
+            <p class="favourite__joke">"My dog used to chase people on a bike a lot. It got so bad I had to take his bike away."</p>
+            <p class="favourite__joke-date">December 12, 2022</p>
+        </div> -->
+    
+    </section>
+</main>
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

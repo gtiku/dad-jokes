@@ -1,0 +1,182 @@
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "./partials/global";
+
+
+.generator {
+    margin: 2rem 5%;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    min-width: 25rem;
+    max-width: 50rem;
+    
+    @include tablet {
+        padding: 3rem;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+        margin-top: 4rem;
+        max-width: 60rem;
+    }
+
+    @include desktop {
+        padding: 4rem;
+        margin: 0 auto;        
+    }
+
+    &__header-search-container {
+        @include flex($direction: column, $align: flex-start);
+        
+        @include tablet {
+            @include flex($justify: space-between);
+        }
+    }
+
+
+
+    &__header {
+        padding: 2rem 0;
+    }
+    
+    &__subheader, &__text {
+        padding: 1.5rem 0;
+    }
+
+    span {
+       font-family:"LB Italic"; 
+       padding: 0 2rem;
+    }
+
+    &__buttons {
+        @include flex($justify: space-around);
+
+        @include tablet {
+            padding-top: 2rem;
+        }
+        
+    }
+
+    &__new-joke, &__add-to-favourites  {
+        &--search {
+            visibility:hidden;
+        }
+    }
+
+    &__search-results {
+        @include flex($direction: column);
+        padding-bottom: 2rem;
+    }
+
+    &__search-result {
+        @include flex($justify: space-between);
+    }
+
+    &__search-result > &__text {
+        width: 16rem;
+        padding-right: 1rem;
+
+        @include tablet {
+            width: 40rem;
+        }
+    }
+
+    &__search-result > button {
+        font-size: 1.2rem;
+        width: 8rem;
+        padding: 0.5rem;
+
+        @include tablet {
+            width: 12rem;
+            padding: 1rem;
+        }
+    }
+
+}
+
+form {
+    font-family: 'LB';
+    font-weight: 400;
+}
+
+input {
+    background-color: $background;
+    color: black;
+    font-size: 1.6rem;
+    font-family: "LB";
+    padding-left: 1rem;
+    height: 3rem;
+    border-radius: 5px;
+    width: 16rem;
+
+    &:focus {
+        outline-color: black;
+      }
+}
+
+button[type="submit"] {
+    background-color: $background;
+    border: none;
+    color: black;
+    width: 2rem;
+    margin: 0;
+    text-align: center;
+
+    &:hover {
+        box-shadow: none;
+    }
+  }
+
+.favourite {
+    margin: 2rem;
+    margin-top: 8rem;
+
+    @include tablet {
+        min-width: none;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+    }
+
+    &__header {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+        line-height: 4.2rem;
+
+        @include tablet {
+            padding-bottom: 4rem;
+            font-size: 5rem;
+        }
+    }
+
+    &__joke-container {
+        padding-bottom: 2rem;
+    }
+
+    &__joke {
+        font-weight: 600;
+        padding: 1rem 0;
+        @include flex($direction: column, $align: flex-start)
+    }
+
+    &__joke-date {
+        font-family: "LB Italic";
+        text-align: end;
+    }
+    
+}
+
+main {
+    @include desktop {
+        margin: 0 auto;
+        max-width: 160rem;
+        
+        @include flex($justify: space-around, $align: flex-start);
+        
+        margin-top: 6rem;
+        margin: 4rem 2rem;
+    }
+}
